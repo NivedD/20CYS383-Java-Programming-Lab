@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>E-Voting Website</title>
+    <style>
+        /* Add your custom styles here */
+        body {
+            background-color:  #ffcc00;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: center;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #333;
+        }
+        .candidate-label {
+            display: inline-block;
+            margin-right: 10px;
+            color: #555;
+        }
+        .submit-button {
+            margin-top: 20px;
+        }
+        .logo {
+            max-width: 200px;
+            margin-bottom: 20px;
+        }
+    </style>
+    <script>
+        function showPrompt() {
+            alert('Vote submitted!');
+            location.reload(); // Reload the page
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <img src="/Users/nived/Desktop/PROJECT/src/image.jpg" alt="Voting Logo" class="logo">
+        <h1>Welcome to E-Voting</h1>
+        <h3>Please cast your vote:</h3>
+        <form id="votingForm" action="submit_vote" method="post">
+            <input type="radio" name="candidate" value="candidate1" id="candidate1">
+            <label for="candidate1" class="candidate-label">Candidate 1</label>
+            <input type="radio" name="candidate" value="candidate2" id="candidate2">
+            <label for="candidate2" class="candidate-label">Candidate 2</label>
+            <input type="radio" name="candidate" value="candidate3" id="candidate3">
+            <label for="candidate3" class="candidate-label">Candidate 3</label>
+            <br>
+            <button type="submit" class="submit-button" onclick="showPrompt()">Submit Vote</button>
+        </form>
+        <p>Thank you for voting!</p>
+    </div>
+</body>
+</html>
